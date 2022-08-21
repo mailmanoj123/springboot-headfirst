@@ -32,6 +32,8 @@ public class SpringbootHeadfirstApplication implements CommandLineRunner {
 	
 	private DecoyDuck decoy;
 	
+	private RunStrategy runStrategy;
+	
 	public static void main(String[] args) {
 		SpringApplication.run(SpringbootHeadfirstApplication.class, args);
 	}
@@ -42,40 +44,7 @@ public class SpringbootHeadfirstApplication implements CommandLineRunner {
 		LOG.info("Hello Head First Design in Springboot World !!!");
 		
 		
-		
-		// --- MiniDuckSimulator
-		
-		
-		FlyBehavior cantFly = () -> System.out.println("I can't fly, from args");
-		QuackBehavior squeak = () -> System.out.println("Squeak,  from args");
-		RubberDuck	rubberDuckieArgs = new RubberDuck(cantFly, squeak);
-		
-		rubberDuckieArgs.performFly();
-		rubberDuckieArgs.performQuack();
-		
-		rubberDuckie.performFly();
-		rubberDuckie.performQuack();
-		
-		//DecoyDuck	decoy = new DecoyDuck();
-
-		
-		mallardDuck.performQuack();
-		
-		decoy.performQuack();
-   
-		modelDuck.performFly();	
-		modelDuck.setFlyBehavior(new FlyRocketPowered());
-		modelDuck.performFly();
-		
-		
-		// --- MiniDuckSimulator1
-		
-		mallardDuck.performQuack();
-		mallardDuck.performFly();
-		
-		modelDuck.performFly();
-		modelDuck.setFlyBehavior(flyRocketPowered);
-		modelDuck.performFly();
+		runStrategy.run();
 		
 		
 		LOG.info("------------Bye----------");
