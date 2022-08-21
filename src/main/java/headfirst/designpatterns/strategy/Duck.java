@@ -2,14 +2,14 @@ package headfirst.designpatterns.strategy;
 
 import org.springframework.stereotype.Component;
 
-import lombok.Setter;
+import lombok.AllArgsConstructor;
 
 @Component
-@Setter
-public abstract class Duck {
+@AllArgsConstructor
+public abstract class Duck<T extends FlyBehavior, U extends QuackBehavior> {
 	
-	FlyBehavior flyBehavior;
-	QuackBehavior quackBehavior;
+	T flyBehavior;
+	U quackBehavior;
 	
 	
 	abstract void display();
@@ -24,6 +24,14 @@ public abstract class Duck {
 
 	public void swim() {
 		System.out.println("All ducks float, even decoys!");
+	}
+
+	public void setFlyBehavior(T flyBehavior) {
+		this.flyBehavior = flyBehavior;
+	}
+
+	public void setQuackBehavior(U quackBehavior) {
+		this.quackBehavior = quackBehavior;
 	}
 
 

@@ -8,8 +8,8 @@
 		<version>2.7.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.dxc.cas</groupId>
-	<artifactId>Springboot-headfirst</artifactId>
+	<groupId>com.app</groupId>
+	<artifactId>springboot-headfirst</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>springboot-headfirst</name>
 	<description>Head First Design Patterns written in Springboot</description>

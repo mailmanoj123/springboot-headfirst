@@ -1,7 +1,7 @@
 package headfirst.designpatterns.strategy;
 
 public class MiniDuckSimulator {
-	 
+	 /*
 	public static void main(String[] args) {
  
 		MallardDuck	mallard = new MallardDuck();
@@ -20,4 +20,5 @@ public class MiniDuckSimulator {
 		model.setFlyBehavior(new FlyRocketPowered());
 		model.performFly();
 	}
+	*/
 }

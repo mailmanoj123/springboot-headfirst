@@ -1,9 +1,14 @@
 package headfirst.designpatterns.strategy;
 
-public class ModelDuck extends Duck {
-	public ModelDuck() {
-		flyBehavior = new FlyNoWay();
-		quackBehavior = new Quack();
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
+@Component
+public class ModelDuck extends Duck<FlyBehavior, QuackBehavior> {
+
+	public ModelDuck(@Qualifier("flyNoWay") final FlyBehavior flyBehavior, 
+			@Qualifier("quack") final QuackBehavior quackBehavior) {
+		super(flyBehavior, quackBehavior);
 	}
 
 	public void display() {

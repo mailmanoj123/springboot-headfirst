@@ -1,10 +1,12 @@
 package headfirst.designpatterns.strategy;
 
-public class RedHeadDuck extends Duck {
-	 
-	public RedHeadDuck() {
-		flyBehavior = new FlyWithWings();
-		quackBehavior = new Quack();
+import org.springframework.beans.factory.annotation.Qualifier;
+
+public class RedHeadDuck extends Duck<FlyBehavior, QuackBehavior> {
+	
+	public RedHeadDuck(@Qualifier("flyWithWings") final FlyBehavior flyBehavior, 
+			@Qualifier("quack") final QuackBehavior quackBehavior) {
+		super(flyBehavior, quackBehavior);
 	}
  
 	public void display() {

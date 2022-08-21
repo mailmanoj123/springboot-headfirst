@@ -1,7 +1,10 @@
 package headfirst.designpatterns.strategy;
 
 public class MiniDuckSimulator1 {
-	 
+	
+	// Please check SpringbootHeadfirstApplication.java file
+	
+	/*
 	public static void main(String[] args) {
  
 		Duck mallard = new MallardDuck();
@@ -14,4 +17,5 @@ public class MiniDuckSimulator1 {
 		model.performFly();
 
 	}
+	*/
 }

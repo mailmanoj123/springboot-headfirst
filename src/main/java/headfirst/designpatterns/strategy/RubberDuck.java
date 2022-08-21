@@ -1,16 +1,21 @@
 package headfirst.designpatterns.strategy;
 
-public class RubberDuck extends Duck {
-	 
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
+@Component
+public class RubberDuck extends Duck<FlyBehavior, QuackBehavior> {
+	/* 
 	public RubberDuck() {
 		flyBehavior = new FlyNoWay();
 		//quackBehavior = new Squeak();
 		quackBehavior = () -> System.out.println("Squeak");
 	}
+	*/
 	
-	public RubberDuck(FlyBehavior flyBehavior, QuackBehavior quackBehavior) {
-		this.flyBehavior = flyBehavior;
-		this.quackBehavior = quackBehavior; 
+	public RubberDuck(@Qualifier("flyNoWay") final FlyBehavior flyBehavior, 
+			@Qualifier("quack") final QuackBehavior quackBehavior) {
+		super(flyBehavior, quackBehavior);
 	}
  
 	public void display() {
