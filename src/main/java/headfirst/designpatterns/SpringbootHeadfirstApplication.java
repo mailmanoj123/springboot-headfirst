@@ -1,4 +1,4 @@
-package com.headFirst.designpatterns;
+package headfirst.designpatterns;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
