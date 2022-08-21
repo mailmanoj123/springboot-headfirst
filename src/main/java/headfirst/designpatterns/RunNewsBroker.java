@@ -27,12 +27,17 @@ public class RunNewsBroker {
 		
 		newsBroker.registerUser(NewsType.CRIME, s1);
 		newsBroker.registerUser(NewsType.POLITICES, s2);
+		newsBroker.registerUser(NewsType.POLITICES, new Subscriber("s2_POLITICES_02"));
 		
 		News news01 = new News(NewsType.CRIME, "This a crime news !!!");		
 		newsBroker.pushNews(news01);
 		
 		
 		newsBroker.pushNews(new News(NewsType.POLITICES, "This a POLITICES news !!!"));
+		
+		newsBroker.unRegisterUser(NewsType.POLITICES, s2);
+		
+		newsBroker.pushNews(new News(NewsType.POLITICES, "This a POLITICES news 02 !!!"));
 		
 	}
 }

@@ -33,9 +33,9 @@ public class SpringbootHeadfirstApplication implements CommandLineRunner {
 		
 		//runStrategy.run();
 		
-		//runNewsBroker.run();
+		runNewsBroker.run();
 		
-		runStrategyInvokeProxyCall.run();
+		//runStrategyInvokeProxyCall.run();
 		
 		
 		LOG.info("------------Bye----------");

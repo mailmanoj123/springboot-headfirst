@@ -23,6 +23,10 @@ public class Channel {
 		subscribers.add(subscriber);
 	}
 	
+	public void removeSubscriber(Subscriber subscriber) {
+		subscribers.remove(subscriber);
+	}
+	
 	public void updateClient(News news){
 		
 		subscribers.stream().forEach(s -> s.update(news));
