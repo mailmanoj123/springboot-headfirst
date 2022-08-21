@@ -11,7 +11,7 @@
 	<groupId>com.dxc.cas</groupId>
 	<artifactId>Springboot-headfirst</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Springboot-headfirst</name>
+	<name>springboot-headfirst</name>
 	<description>Head First Design Patterns written in Springboot</description>
 	<properties>
 		<java.version>11</java.version>
