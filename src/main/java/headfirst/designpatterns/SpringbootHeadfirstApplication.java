@@ -21,6 +21,8 @@ public class SpringbootHeadfirstApplication implements CommandLineRunner {
 	
 	private RunStrategyInvokeProxyCall runStrategyInvokeProxyCall;
 	
+	private RunSimpleObserver runSimpleObserver;
+	
 	public static void main(String[] args) {
 		SpringApplication.run(SpringbootHeadfirstApplication.class, args);
 	}
@@ -33,9 +35,11 @@ public class SpringbootHeadfirstApplication implements CommandLineRunner {
 		
 		//runStrategy.run();
 		
-		runNewsBroker.run();
+		//runNewsBroker.run();
 		
 		//runStrategyInvokeProxyCall.run();
+		
+		runSimpleObserver.run();
 		
 		
 		LOG.info("------------Bye----------");

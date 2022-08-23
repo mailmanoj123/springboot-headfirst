@@ -1,5 +1,8 @@
 package headfirst.designpatterns.observer.simple;
-	
+
+import org.springframework.stereotype.Component;
+
+@Component
 public class SimpleObserver implements Observer {
 	private int value;
 	private Subject simpleSubject;

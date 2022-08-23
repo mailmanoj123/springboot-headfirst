@@ -1,7 +1,11 @@
 package headfirst.designpatterns.observer.simple;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class SimpleSubject implements Subject {
 	private List<Observer> observers;
 	private int value = 0;
