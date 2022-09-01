@@ -1,10 +1,18 @@
 package headfirst.designpatterns.state.gumballstatewinner;
 
-public class GumballMachineTestDrive {
+import org.springframework.stereotype.Component;
 
-	public static void main(String[] args) {
-		GumballMachine gumballMachine = 
-			new GumballMachine(10);
+import lombok.AllArgsConstructor;
+
+@Component
+@AllArgsConstructor
+public class GumballMachineTest {
+
+	private GumballMachine gumballMachine;
+	
+	public void process() {
+		
+		gumballMachine.loadGumballs(10);
 
 		System.out.println(gumballMachine);
 

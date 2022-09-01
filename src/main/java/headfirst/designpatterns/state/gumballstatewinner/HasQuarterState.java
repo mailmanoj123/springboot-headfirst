@@ -2,6 +2,9 @@ package headfirst.designpatterns.state.gumballstatewinner;
 
 import java.util.Random;
 
+import org.springframework.stereotype.Component;
+
+@Component("hasQuarterState")
 public class HasQuarterState implements State {
 	Random randomWinner = new Random(System.currentTimeMillis());
 	GumballMachine gumballMachine;

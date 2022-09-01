@@ -1,5 +1,8 @@
 package headfirst.designpatterns.state.gumballstatewinner;
 
+import org.springframework.stereotype.Component;
+
+@Component("winnerState")
 public class WinnerState implements State {
     GumballMachine gumballMachine;
  

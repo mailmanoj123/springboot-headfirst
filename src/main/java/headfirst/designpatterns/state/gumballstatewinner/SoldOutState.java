@@ -1,6 +1,10 @@
 package headfirst.designpatterns.state.gumballstatewinner;
 
+import org.springframework.stereotype.Component;
+
+@Component("soldOutState")
 public class SoldOutState implements State {
+	
     GumballMachine gumballMachine;
  
     public SoldOutState(GumballMachine gumballMachine) {

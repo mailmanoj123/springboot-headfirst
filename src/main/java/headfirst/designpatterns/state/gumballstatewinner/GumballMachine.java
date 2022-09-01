@@ -1,27 +1,41 @@
 package headfirst.designpatterns.state.gumballstatewinner;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
+@Component
 public class GumballMachine {
  
+	@Autowired
+    @Qualifier("soldOutState")
 	State soldOutState;
+	
+	@Autowired
+    @Qualifier("noQuarterState")
 	State noQuarterState;
+	
+	@Autowired
+    @Qualifier("hasQuarterState")
 	State hasQuarterState;
+	
+	@Autowired
+    @Qualifier("soldState")
 	State soldState;
+	
+	@Autowired
+    @Qualifier("winnerState")
 	State winnerState;
  
 	State state = soldOutState;
 	int count = 0;
- 
-	public GumballMachine(int numberGumballs) {
-		soldOutState = new SoldOutState(this);
-		noQuarterState = new NoQuarterState(this);
-		hasQuarterState = new HasQuarterState(this);
-		soldState = new SoldState(this);
-		winnerState = new WinnerState(this);
-
+	
+	public void loadGumballs(int numberGumballs) {
+		
 		this.count = numberGumballs;
  		if (numberGumballs > 0) {
 			state = noQuarterState;
-		} 
+		}
 	}
  
 	public void insertQuarter() {

@@ -6,6 +6,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import headfirst.designpatterns.state.gumballstatewinner.GumballMachineTest;
 import lombok.AllArgsConstructor;
 
 
@@ -23,6 +24,8 @@ public class SpringbootHeadfirstApplication implements CommandLineRunner {
 	
 	private RunSimpleObserver runSimpleObserver;
 	
+	private GumballMachineTest gumballMachineTestDrive;
+	
 	public static void main(String[] args) {
 		SpringApplication.run(SpringbootHeadfirstApplication.class, args);
 	}
@@ -39,7 +42,9 @@ public class SpringbootHeadfirstApplication implements CommandLineRunner {
 		
 		//runStrategyInvokeProxyCall.run();
 		
-		runSimpleObserver.run();
+		//runSimpleObserver.run();
+		
+		gumballMachineTestDrive.process();
 		
 		
 		LOG.info("------------Bye----------");
